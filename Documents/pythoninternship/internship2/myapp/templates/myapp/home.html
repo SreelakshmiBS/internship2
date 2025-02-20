@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body {
+            background-color:rgb(59, 64, 97); /* Dark Grey */
+            color:rgb(228, 226, 245); /* Light Grey */
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #FFFFFF;
+        }
+        a {
+            display: block;
+            background-color:rgb(78, 78, 88); /* Grey Button */
+            color: white;
+            padding: 10px;
+            margin: 10px auto;
+            text-decoration: none;
+            width: 200px;
+            border-radius: 5px;
+        }
+        a:hover {
+            background-color: #6E6E6E; /* Lighter Grey on Hover */
+        }
+    </style>
+</head>
+<body>
+    <h1>WORD COUNT</h1>
+    <p>Count the number of words that you need to know... Pretty excited!</p>
+    <a href="{% url 'post_list' %}">View Your Posts</a>
+    <a href="{% url 'post_create' %}">Create a Post</a>
+</body>
+</html>

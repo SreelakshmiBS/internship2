@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Post</title>
+    <style>
+        body {
+            background-color:rgb(129, 118, 180); /* Dark Grey */
+            color: #D3D3D3; /* Light Grey */
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #FFFFFF;
+        }
+        form {
+            background: #3E3E3E;
+            padding: 20px;
+            border-radius: 8px;
+            display: inline-block;
+            text-align: left;
+        }
+        button {
+            background-color: #4F4F4F;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #6E6E6E;
+        }
+        a {
+            display: inline-block;
+            margin-top: 15px;
+            color: #D3D3D3;
+            text-decoration: none;
+            padding: 10px;
+        }
+        a:hover {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Edit Post</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Update Post</button>
+    </form>
+    <br>
+    <a href="{% url 'post_list' %}">Back to List</a>
+</body>
+</html>
