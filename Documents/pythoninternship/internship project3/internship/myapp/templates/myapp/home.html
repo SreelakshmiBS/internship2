@@ -1,0 +1,25 @@
+{% extends "myapp/base.html" %}
+
+{% block title %}Home - Track Expense{% endblock %}
+
+{% block content %}
+<div style="text-align: center; margin-top: 50px;">
+    <h1>Welcome to Expense Tracker</h1>
+    <p>Manage your expenses easily!</p>
+
+    <div style="margin-top: 30px;">
+        
+        
+        <a href="{% url 'add_expense' %}" style="text-decoration: none;">
+            <button style="padding: 12px 24px; font-size: 18px; background-color:rgb(2, 12, 95); color: white; border: none; border-radius: 5px; cursor: pointer;">
+                Add Expense
+            </button>
+        </a>
+        <a href="{% url 'expense_list' %}" style="text-decoration: none;">
+            <button style="padding: 12px 24px; font-size: 18px; background-color:rgb(2, 12, 95); color: white; border: none; border-radius: 5px; cursor: pointer; margin-right: 10px;">
+                View Expenses
+            </button>
+        </a>
+    </div>
+</div>
+{% endblock %}
