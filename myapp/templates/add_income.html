@@ -1,0 +1,25 @@
+{% extends "myapp/base.html" %}
+
+{% block title %}Add Your Income{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card p-4">
+                <h2 class="text-center mb-4">Add Your Income</h2>
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        {{ form.as_p }}
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Add Your Income</button>
+                </form>
+                <div class="text-center mt-3">
+                    <a href="{% url 'add_income' %}" class="btn btn-secondary">Back to List</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

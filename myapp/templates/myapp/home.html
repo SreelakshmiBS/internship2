@@ -1,0 +1,37 @@
+{% extends "myapp/base.html" %}
+
+{% block title %}Home - Track Expense{% endblock %}
+
+{% block content %}
+<div style="text-align: center; margin-top: 50px;">
+    <h1>Welcome to Expense Tracker</h1>
+    <p>Manage your expenses easily!</p>
+
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 15px; margin-top: 20px;">
+        <a href="{% url 'add_expense' %}" style="text-decoration: none;">
+            <button style="width: 250px; padding: 12px; font-size: 18px; background-color: rgb(2, 12, 95); color: white; border: none; border-radius: 5px; cursor: pointer;">
+                Add Expense
+            </button>
+        </a>
+    
+        <a href="{% url 'add_income' %}" style="text-decoration: none;">
+            <button style="width: 250px; padding: 12px; font-size: 18px; background-color: rgb(2, 12, 95); color: white; border: none; border-radius: 5px; cursor: pointer;">
+                Add Income
+            </button>
+        </a>
+    
+        <a href="{% url 'expense_list' %}" style="text-decoration: none;">
+            <button style="width: 250px; padding: 12px; font-size: 18px; background-color: rgb(2, 12, 95); color: white; border: none; border-radius: 5px; cursor: pointer;">
+                View Expenses
+            </button>
+        </a>
+    
+        <a href="{% url 'income_list' %}" style="text-decoration: none;">
+            <button style="width: 250px; padding: 12px; font-size: 18px; background-color: rgb(2, 12, 95); color: white; border: none; border-radius: 5px; cursor: pointer;">
+                View Income
+            </button>
+        </a>
+    </div>
+    
+</div>
+{% endblock %}
